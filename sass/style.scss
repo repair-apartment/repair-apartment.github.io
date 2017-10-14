@@ -1,18 +1,18 @@
 /*
 Task:
 
-1. Сделать scrollTo
-2. Сделать preloader(хочу в процентах)
-3. Адаптировать
-4. Подумать о блоке контактов
-5. Написать пхп
-6. Сделать страницку после отправки заявки
++ 1. Сделать scrollTo
++ 2. Сделать preloader(хочу в процентах)
++ 3. Адаптировать
++ 4. Подумать о блоке контактов
++ 5. Написать пхп
++ 6. Сделать страницку после отправки заявки
 7. Оптимизировать код
 
 
 */
 
-*{box-sizing: border-box;}
+*{box-sizing: border-box;margin: 0;padding: 0;}
 
 body{
   font-family: "Open Sans",sans-serif;
@@ -268,6 +268,7 @@ button,input[type="submit"]{cursor: pointer;}
     margin-top: 0;
     font-size: 45px;
     color: #194573;
+    word-wrap: break-word;
 
     &__theme_bg{color: #fff;}
   }
@@ -475,6 +476,10 @@ button,input[type="submit"]{cursor: pointer;}
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.tab-container{
   overflow: hidden;
 }
 
