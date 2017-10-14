@@ -237,6 +237,12 @@ input[type="submit"] {
 .nav__list {
   padding: 0;
   margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .nav__item {
   padding: 0 13px;
