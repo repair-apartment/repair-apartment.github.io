@@ -44,7 +44,6 @@ input[type="submit"] {
   background: #20364b;
   -webkit-background-size: 300px 300px;
   background-size: 300px;
-  display: none !important;
 }
 
 .preloader {
