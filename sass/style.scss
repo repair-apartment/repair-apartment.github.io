@@ -665,10 +665,12 @@ button,input[type="submit"]{cursor: pointer;}
 
   .container{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
+
+  a{text-decoration: underline;color:#515151;}
 
   &__nav{
    .nav__item{
