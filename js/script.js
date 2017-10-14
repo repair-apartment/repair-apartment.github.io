@@ -1,7 +1,5 @@
 $(function() {
 
-$(document).addClass('test');
-
 // Menu
 
   $('.header__icon').click(function() {
