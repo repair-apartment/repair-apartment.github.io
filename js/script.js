@@ -72,6 +72,20 @@ function img_load(){
   $('.preloader__line').css('width',progress + '%');
 }
 
+
+//Animate
+
+$(window).scroll(function() {
+    $('.animated').each(function(){
+      var imagePos = $(this).offset().top;
+      var topOfWindow = $(window).scrollTop();
+      if (imagePos < topOfWindow + 1000) {
+        $(this).addClass($(this).attr('data-animate'));
+      }
+    });
+  });
+
+
 });
 
 

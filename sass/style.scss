@@ -31,6 +31,7 @@ button,input[type="submit"]{cursor: pointer;}
  z-index: 11;
  background: #20364B;
  background-size: 300px;
+ display: none !important;
 }
 
 
@@ -77,6 +78,19 @@ button,input[type="submit"]{cursor: pointer;}
     transform: rotate(360deg);
   }
 }
+
+/*===============
+   hide for animate
+======================*/
+
+.animated[data-animate*='fade']{
+  visibility: hidden;
+}
+
+
+//{visibility: hidden;}
+
+
 /*===============
    HELPERS
 ======================*/
@@ -94,6 +108,8 @@ button,input[type="submit"]{cursor: pointer;}
   margin: 0 auto;
 }
 
+.fadeIn,
+.fadeInUp{visibility: visible!important;animation-duration: 1.5s;}
 
 /*===============
    Form Element
@@ -233,7 +249,8 @@ button,input[type="submit"]{cursor: pointer;}
   text-align: center;
   color: #fff;
   padding: 230px 0;
-  background:rgba(0,0,0,.5) url('../img/header-bg.jpg') no-repeat center/cover;
+  background:rgba(0,0,0,.5) url('../img/header-bg.jpg') no-repeat center;
+  background-size: cover;
 
   &__title{
     font-size: 55px;
@@ -245,7 +262,8 @@ button,input[type="submit"]{cursor: pointer;}
     word-wrap: break-word;
     font-size: 45px;
     font-weight: 300;
-    line-height:1.3;}
+    line-height:1.3;
+  }
 
 }
 
@@ -261,7 +279,8 @@ button,input[type="submit"]{cursor: pointer;}
 
 
  &__theme_bg{
-  background:url('../img/header-bg.jpg') no-repeat center/cover;
+  background:url('../img/header-bg.jpg') no-repeat center;
+  background-size: cover;
  }
 
   &__title{
@@ -295,7 +314,8 @@ button,input[type="submit"]{cursor: pointer;}
 ======================*/
 
 .features{
-  background:transparent url('../img/features__bg.jpg') no-repeat center/cover;
+  background:transparent url('../img/features__bg.jpg') no-repeat center;
+  background-size: cover;
   color: #fff;
   padding: 70px 0;
 
@@ -376,7 +396,8 @@ button,input[type="submit"]{cursor: pointer;}
 ======================*/
 
 .work{
-  background:transparent url('../img/testimonials__bg.jpg') no-repeat center/cover;
+  background:transparent url('../img/testimonials__bg.jpg') no-repeat center;
+  background-size: cover;
   padding: 70px 0;
   color: #fff;
 
@@ -442,12 +463,14 @@ button,input[type="submit"]{cursor: pointer;}
     &:before{
       top: -30px;
       left: -2%;
-      background: url('../img/quote-1.png') no-repeat center/cover;
+      background: url('../img/quote-1.png') no-repeat center;
+      background-size: cover;
     }
     &:after{
       bottom: -30px;
       right: 0;
-      background: url('../img/quote-2.png') no-repeat center/cover;
+      background: url('../img/quote-2.png') no-repeat center;
+      background-size: cover;
     }
   }
 
@@ -544,7 +567,8 @@ button,input[type="submit"]{cursor: pointer;}
 .contact{
   padding: 70px 0;
   color: #fff;
-  background: url('../img/features__bg.jpg') no-repeat center/cover;
+  background: url('../img/features__bg.jpg') no-repeat center;
+  background-size: cover;
 
   &__address{font-style: normal;}
 

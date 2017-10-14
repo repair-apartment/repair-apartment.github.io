@@ -44,6 +44,7 @@ input[type="submit"] {
   background: #20364b;
   -webkit-background-size: 300px 300px;
   background-size: 300px;
+  display: none !important;
 }
 
 .preloader {
@@ -105,6 +106,13 @@ input[type="submit"] {
 }
 
 /*===============
+   hide for animate
+======================*/
+.animated[data-animate*='fade'] {
+  visibility: hidden;
+}
+
+/*===============
    HELPERS
 ======================*/
 .section__title {
@@ -118,6 +126,13 @@ input[type="submit"] {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.fadeIn,
+.fadeInUp {
+  visibility: visible !important;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
 }
 
 /*===============
@@ -257,7 +272,9 @@ input[type="submit"] {
   text-align: center;
   color: #fff;
   padding: 230px 0;
-  background: rgba(0, 0, 0, .5) url("../img/header-bg.jpg") no-repeat center/cover;
+  background: rgba(0, 0, 0, .5) url("../img/header-bg.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 .first-screen__title {
   font-size: 55px;
@@ -280,7 +297,9 @@ input[type="submit"] {
   padding: 70px 0;
 }
 .write-us__theme_bg {
-  background: url("../img/header-bg.jpg") no-repeat center/cover;
+  background: url("../img/header-bg.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 .write-us__title {
   margin-top: 0;
@@ -322,7 +341,9 @@ input[type="submit"] {
    FEATURES
 ======================*/
 .features {
-  background: transparent url("../img/features__bg.jpg") no-repeat center/cover;
+  background: transparent url("../img/features__bg.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
   color: #fff;
   padding: 70px 0;
 }
@@ -425,7 +446,9 @@ input[type="submit"] {
    Work
 ======================*/
 .work {
-  background: transparent url("../img/testimonials__bg.jpg") no-repeat center/cover;
+  background: transparent url("../img/testimonials__bg.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
   padding: 70px 0;
   color: #fff;
 }
@@ -491,12 +514,16 @@ input[type="submit"] {
 .testimonials__text:before {
   top: -30px;
   left: -2%;
-  background: url("../img/quote-1.png") no-repeat center/cover;
+  background: url("../img/quote-1.png") no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 .testimonials__text:after {
   bottom: -30px;
   right: 0;
-  background: url("../img/quote-2.png") no-repeat center/cover;
+  background: url("../img/quote-2.png") no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 .testimonials__sign {
   font-style: italic;
@@ -597,7 +624,9 @@ input[type="submit"] {
 .contact {
   padding: 70px 0;
   color: #fff;
-  background: url("../img/features__bg.jpg") no-repeat center/cover;
+  background: url("../img/features__bg.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 .contact__address {
   font-style: normal;
