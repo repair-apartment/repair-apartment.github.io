@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Ремонт квартир</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+
+</head>
+<body>
+
+<div class="overlay">
+  <div class="preloader__line"></div>
+  <div class="preloader"><div class="preloader__loader"></div></div>
+</div>
+
+
+
+<!-- Header -->
+<header class="header">
+   <div class="container">
+
+      <p class="header__logo logo">Ремонтные работы любой сложности  <i class="fa fa-bars header__icon"></i></p>
+
+
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <i class="fa fa-times nav__cross"></i>
+          <li class="nav__item"><a href="#why" class="nav__link">Почему мы?</a></li>
+          <li class="nav__item"><a href="#price" class="nav__link">Цены</a></li>
+          <li class="nav__item"><a href="#testimonials" class="nav__link">Отзывы</a></li>
+          <li class="nav__item"><a href="#steps" class="nav__link">Этапы</a></li>
+          <li class="nav__item"><a href="#works" class="nav__link">Работы</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+
+    </div>
+</header>
+<!-- End Header -->
+
+
+<!-- Header Titles -->
+<section class="first-screen">
+   <h1 class="first-screen__title">Современный ремонт “под ключ”</h1>
+   <h2 class="first-screen__subtitle">Воплощаем любые мечты, от проектировки до <br>полной реализации</h2>
+</section>
+
+
+<!-- About Us -->
+<!-- <section class="about-us">
+  <div class="container">
+      <h2 class="section__title">О нас</h2>
+  </div>
+</section> -->
+<!-- End About Us -->
+
+
+<!-- Write Us -->
+<section class="write-us">
+  <div class="container">
+
+   <h2 class="write-us__title">Напишите нам!</h2>
+   <h3 class="write-us__subtitle">Оставьте заявку и наш мастер перезвонит Вам в ближайщее время!</h3>
+
+   <form class="write-us__row row" method="POST" action="send.php">
+     <input required name="name" type="text" class="field-enter" placeholder="Введите имя*">
+     <input required name="phone" type="text" class="field-enter" placeholder="Введите телефон*">
+     <button class="button-send">Оставить заявку</button>
+   </form>
+
+  </div>
+</section>
+<!-- End Write Us -->
+
+
+<!-- Features -->
+<section class="features" id="why">
+  <div class="container">
+    <h2 class="section__title">Почему мы?</h2>
+
+
+    <section class="features__container">
+      <article class="features__item">
+          <i class="fa fa-users features__img"></i>
+          <h4 class="features__title">Опыт</h4>
+          <h6 class="features__subtitle">Команда профессионалов. Отремонтировано более 140 объектов.</h6>
+        </article>
+        <article class="features__item">
+          <i class="fa fa-thumbs-o-up features__img"></i>
+          <h4 class="features__title">Качество</h4>
+          <h6 class="features__subtitle">Используем качественные и экологически чистые материалы</h6>
+        </article>
+        <article class="features__item">
+          <i class="fa fa-credit-card features__img" aria-hidden="true"></i>
+          <h4 class="features__title">Гарантия</h4>
+          <h6 class="features__subtitle">Работаем с оплатой по этапам. БЕЗ ПРЕДОПЛАТ. Гарантируем!</h6>
+        </article>
+        <article class="features__item">
+          <i class="fa fa-rub features__img" aria-hidden="true"></i>
+          <h4 class="features__title">Цена</h4>
+          <h6 class="features__subtitle">Пожалуй лучшее соотношение цена- качество на рынке</h6>
+        </article>
+    </section>
+  </div>
+</section>
+
+<!-- End Features -->
+
+
+<!-- steps -->
+<section class="steps" id="steps">
+  <div class="container">
+
+    <h2 class="section__title">Этапы сотрудничества</h2>
+
+    <div class="steps__container">
+      <div class="steps__item">
+        <div class="steps__img"><span class="steps__number">1</span></div>
+        <span class="steps__text">Описание шаг 1</span>
+      </div>
+      <div class="steps__item">
+        <div class="steps__img"><span class="steps__number">2</span></div>
+        <span class="steps__text">Описание шаг 2</span>
+      </div>
+      <div class="steps__item">
+        <div class="steps__img"><span class="steps__number">3</span></div>
+        <span class="steps__text">Описание шаг 3</span>
+      </div>
+      <div class="steps__item">
+        <div class="steps__img"><span class="steps__number">4</span></div>
+        <span class="steps__text">Описание шаг 4</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end steps -->
+
+
+<!-- work -->
+<section class="work" id="works">
+  <div class="container">
+
+   <h2 class="section__title">Наши работы</h2>
+
+    <div class="work__container">
+        <div class="work__item"><img src="img/work/work-1.JPG" alt="" class="work__img"></div>
+        <div class="work__item"><img src="img/work/work-2.JPG" alt="" class="work__img"></div>
+        <div class="work__item"><img src="img/work/work-3.JPG" alt="" class="work__img"></div>
+        <div class="work__item"><img src="img/work/work-4.JPG" alt="" class="work__img"></div>
+        <div class="work__item"><img src="img/work/work-5.JPG" alt="" class="work__img"></div>
+        <div class="work__item"><img src="img/work/work-6.JPG" alt="" class="work__img"></div>
+        <div class="work__item"><img src="img/work/work-7.JPG" alt="" class="work__img"></div>
+        <div class="work__item"><img src="img/work/work-8.JPG" alt="" class="work__img"></div>
+    </div>
+
+    <button class="button-send button-send--row">Оставить заявку</button>
+
+  </div>
+</section>
+<!-- end work -->
+
+
+<!-- Testimonials -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+
+    <h2 class="section__title">Отзывы</h2>
+
+
+    <article class="testimonials__item">
+      <p class="testimonials__text">Не следует, однако забывать, что рамки и место обучения кадров играет важную роль в формировании дальнейших направлений развития. Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять .</p>
+      <p class="testimonials__sign">Петр Петров</p>
+    </article>
+
+    <article class="testimonials__item">
+      <p class="testimonials__text">Не следует, однако забывать, что рамки и место обучения кадров играет важную роль в формировании дальнейших направлений развития. Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять .</p>
+      <p class="testimonials__sign">Петр Петров</p>
+    </article>
+
+    <article class="testimonials__item">
+      <p class="testimonials__text">Не следует, однако забывать, что рамки и место обучения кадров играет важную роль в формировании дальнейших направлений развития. Идейные соображения высшего порядка, а также консультация с широким активом позволяет выполнять .</p>
+      <p class="testimonials__sign">Петр Петров</p>
+    </article>
+
+
+
+  </div>
+</section>
+<!-- End Testimonials -->
+
+<!-- Write Us -->
+<section class="write-us write-us__theme_bg">
+  <div class="container">
+
+   <h2 class="write-us__title write-us__title__theme_bg">Напишите нам!</h2>
+   <h3 class="write-us__subtitle write-us__subtitle__theme_bg">Оставьте заявку и наш мастер перезвонит Вам в ближайщее время!</h3>
+
+   <form class="write-us__row row" method="POST" action="send.php">
+     <input required name="name" type="text" class="field-enter" placeholder="Введите имя*">
+     <input required name="phone" type="text" class="field-enter" placeholder="Введите телефон*">
+     <button type="submit" class="button-send">Оставить заявку</button>
+   </form>
+
+  </div>
+</section>
+<!-- End Write Us -->
+
+<!-- Price -->
+<section class="price" id="price">
+  <div class="container">
+
+  <h2 class="section__title">Цены</h2>
+
+  <div id="tab-container" class="tab-container">
+    <ul class='etabs'>
+      <li class='tab'><a href="#tab1">Категория 1</a></li>
+      <li class='tab'><a href="#tab2">Категория 2</a></li>
+      <li class='tab'><a href="#tab3">Категория 3</a></li>
+      <li class='tab'><a href="#tab4">Категория 4</a></li>
+
+    </ul>
+    <div class="tab-content" id="tab1">
+      <table class="table">
+          <tbody><tr>
+            <th>Виды работ</th>
+            <th>Ед. изм</th>
+            <th>Цена</th>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+        </tbody></table>
+    </div>
+    <div class="tab-content" id="tab2">
+      <table class="table">
+          <tbody><tr>
+            <th>Виды работ</th>
+            <th>Ед. изм</th>
+            <th>Цена</th>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+        </tbody></table>
+    </div>
+    <div class="tab-content" id="tab3">
+      <table class="table">
+          <tbody><tr>
+            <th>Виды работ</th>
+            <th>Ед. изм</th>
+            <th>Цена</th>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+        </tbody></table>
+    </div>
+
+    <div class="tab-content" id="tab4">
+      <table class="table">
+          <tbody><tr>
+            <th>Виды работ</th>
+            <th>Ед. изм</th>
+            <th>Цена</th>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+
+            <td>Название</td>
+            <td>м.кв</td>
+            <td>3000</td>
+          </tr>
+        </tbody></table>
+    </div>
+  </div>
+
+
+  </div>
+</section>
+<!-- End Price -->
+
+<!-- Contact -->
+<section class="contact" id="contact">
+    <div class="container">
+
+      <h2 class="section__title">Контакты</h2>
+
+
+      <div class="contact__container">
+        <address class="contact__address">
+          <p class="contact__info"><i class="fa fa-phone contact__icon" aria-hidden="true"></i>8(925)427-44-87</p>
+          <p class="contact__info"><i class="fa fa-envelope contact__icon" aria-hidden="true"></i>subkhankulov.timur@yandex.ru</p>
+          <br>
+          <p class="contact__info"><i class="fa fa-phone contact__icon" aria-hidden="true"></i>8(926)428-15-32</p>
+          <p class="contact__info"><i class="fa fa-envelope contact__icon" aria-hidden="true"></i>postnov.igor@yandex.ru</p>
+        </address>
+
+        <form action="send.php" method="POST" class="contact__form">
+          <div class="form__inner">
+            <input required name="name" type="text" class="contact__input" placeholder="Введите имя">
+            <input required name="phone" type="text" class="contact__input" placeholder="Введите телефон или email">
+          </div>
+          <textarea name="message" id="message" class="contact__textarea" placeholder="Введите сообщение"></textarea>
+          <button type="submit" class="contact__button">Отправить</button>
+        </form>
+
+      </div>
+
+    </div>
+</section>
+<!-- End Contact -->
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+      <div class="copyright"><span class="" style="line-height: 40px">Разработчик <a href="http://dev-postnov.ru">dev-postnov.ru</a></span></div>
+      <nav class="footer__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#why" class="nav__link">Почему мы?</a></li>
+          <li class="nav__item"><a href="#price" class="nav__link">Цены</a></li>
+          <li class="nav__item"><a href="#testimonials" class="nav__link">Отзывы</a></li>
+          <li class="nav__item"><a href="#steps" class="nav__link">Этапы</a></li>
+          <li class="nav__item"><a href="#works" class="nav__link">Работы</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+
+    </div>
+</footer>
+<!-- End Footer -->
+
+
+
+<!-- Scripts -->
+
+<script src="libs/jquery/jquery-3.2.1.min.js"></script>
+<script src="libs/bxslider/jquery.bxslider.min.js"></script>
+<script src="libs/easytabs/lib/jquery.easytabs.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

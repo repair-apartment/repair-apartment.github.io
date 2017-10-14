@@ -1,0 +1,650 @@
+/*
+Task:
+
+1. Сделать scrollTo
+2. Сделать preloader(хочу в процентах)
+3. Адаптировать
+4. Подумать о блоке контактов
+5. Написать пхп
+6. Сделать страницку после отправки заявки
+7. Оптимизировать код
+
+
+*/
+
+*{box-sizing: border-box;}
+
+body{
+  font-family: "Open Sans",sans-serif;
+  color: #4f4f4f;
+}
+
+input,button{outline:none}
+button,input[type="submit"]{cursor: pointer;}
+
+.overlay{
+ width: 100%;
+ height: 100%;
+ position: fixed;
+ left: 0;
+ top: 0;
+ z-index: 11;
+ background: #20364B;
+ background-size: 300px;
+}
+
+
+
+.preloader{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  font-size: 55px;
+  color:#fff;
+  text-align: center;
+  transform: translate(-50%, -50%);
+
+
+  &__loader{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    border-right-color: #fff;
+    border-left-color: #fff;
+    animation: spin 2s infinite linear;
+  }
+
+  &__line{
+    height: 6px;
+    transition: all .5s;
+    width: 0;
+    position: absolute;
+    left: 0;
+    top: 0%;
+    background-color: #fff;
+    transition: all .5s;
+  }
+}
+
+
+@keyframes spin{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+/*===============
+   HELPERS
+======================*/
+
+.section__title{
+  font-size: 36px;
+  text-align: center;
+  margin: 0 0 60px;
+  word-wrap: break-word;
+}
+
+.container{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/*===============
+   Form Element
+======================*/
+
+.field-enter{
+  width: 90%;
+  max-width: 300px;
+  border-radius: 4px;
+  border: none;
+  padding: 15px 10px;
+  margin: 5px;
+  box-shadow: inset 0 1px 3px #999;
+  outline: none;
+}
+
+.button-send{
+    max-width: 300px;
+    width: 90%;
+    background-color: #578adf;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    padding: 14px 70px;
+    border-radius: 4px;
+    transition: .5s all;
+
+    &:hover{
+      background-color: darken(#578adf,8%);
+    }
+
+    &--row{
+      display: block;
+      margin: 70px auto 0;
+    }
+}
+
+
+/*===============
+   HEADER
+======================*/
+
+
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.29);
+    z-index: 10;
+    padding: 25px 15px;
+
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+  }
+
+  &__line{
+    overflow: hidden;
+    background-color: #fff;
+  }
+
+  &__icon{
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #194573;
+    cursor: pointer;
+  }
+
+}
+
+.nav{
+  display: block;
+  text-align: right;
+
+  &__cross{
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 25px;
+    color: #194573;
+  }
+
+  &__list{
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item{
+    padding: 0 13px;
+    display: inline-block;
+    transition: .3s all;
+
+
+
+    &:hover{
+      color: #27b399;
+      text-decoration: none;
+    }
+  }
+
+  &__link{
+    color: #4f4f4f;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+}
+
+.logo{
+    position: relative;
+    text-align: left;
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+
+/*===============
+   FIRST SCREEN
+======================*/
+
+.first-screen{
+  text-align: center;
+  color: #fff;
+  padding: 230px 0;
+  background:rgba(0,0,0,.5) url('../img/header-bg.jpg') no-repeat center/cover;
+
+  &__title{
+    font-size: 55px;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+  &__subtitle{
+    max-width: 100%;
+    word-wrap: break-word;
+    font-size: 45px;
+    font-weight: 300;
+    line-height:1.3;}
+
+}
+
+
+
+/*===============
+  WRITE US
+======================*/
+.write-us{
+  text-align: center;
+  padding: 70px 0;
+
+
+
+ &__theme_bg{
+  background:url('../img/header-bg.jpg') no-repeat center/cover;
+ }
+
+  &__title{
+    margin-top: 0;
+    font-size: 45px;
+    color: #194573;
+
+    &__theme_bg{color: #fff;}
+  }
+
+  &__subtitle{
+    color: #818181;
+    font-size: 28px;
+    font-weight: 300;
+
+    &__theme_bg{color: #fff;}
+  }
+
+  &__row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+}
+
+/*===============
+   FEATURES
+======================*/
+
+.features{
+  background:transparent url('../img/features__bg.jpg') no-repeat center/cover;
+  color: #fff;
+  padding: 70px 0;
+
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+
+  &__item{
+    text-align: center;
+    margin: 30px 0;
+    flex: 0 0 25%;
+  }
+
+  &__title{font-size: 30px;margin: 15px 0;}
+  &__subtitle{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 10px 0;
+  }
+
+  &__img{
+    font-size: 70px;
+    margin-bottom: 20px;
+  }
+}
+
+/*===============
+   STEPS
+======================*/
+
+.steps{
+  padding: 70px 0;
+
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__item{
+    margin: 50px 0;
+    text-align: center;
+    flex: 0 0 25%;
+  }
+
+  &__img{
+    font-size: 30px;
+    color: #194573;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    border: 2px solid #194573;
+    position: relative;
+  }
+
+  &__number{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+  }
+
+  &__text{
+    font-size: 16px;
+    color: #194573;
+  }
+}
+
+/*===============
+   Work
+======================*/
+
+.work{
+  background:transparent url('../img/testimonials__bg.jpg') no-repeat center/cover;
+  padding: 70px 0;
+  color: #fff;
+
+   &__container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   }
+
+   &__row{
+    font-size: 0;
+    margin: 0;
+   }
+
+   &__item{
+    overflow: hidden;
+    padding: 0;
+    display: inline-block;
+    vertical-align: top;
+    flex: 0 0 50%;
+    -webkit-flex: 0 0 50%;
+   }
+
+   &__img{
+    height: 100%;
+    width: 100%;
+   }
+}
+
+
+/*===============
+   TESTIMONIALS
+======================*/
+
+.testimonials{
+  padding: 70px 0;
+
+
+
+  &__item{
+    margin: 50px auto;
+    float: none;
+  }
+
+  &__text{
+    text-align: center;
+    line-height: 1.5;
+    font-size: 16px;
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+
+    &:before,
+    &:after{
+      content:'';
+      position: absolute;
+      display: block;
+      width:30px;
+      height: 23px;
+    }
+
+    &:before{
+      top: -30px;
+      left: -2%;
+      background: url('../img/quote-1.png') no-repeat center/cover;
+    }
+    &:after{
+      bottom: -30px;
+      right: 0;
+      background: url('../img/quote-2.png') no-repeat center/cover;
+    }
+  }
+
+
+  &__sign{
+    font-style: italic;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 19px;
+    color: rgb(47, 60, 73);
+  }
+}
+
+/*===============
+   PRICE
+======================*/
+
+.price{
+  padding: 70px 0;
+}
+
+.etabs{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.tab{
+  background-color: #eee;
+  margin-bottom: 40px;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 2px solid #194573;
+  flex: 0 0 25%;
+  box-sizing: border-box;
+
+  a{
+    color: #194573;
+    text-decoration: none !important;
+  }
+}
+
+.tab.active{
+  background-color: #194573;
+  color: #fff;
+
+  a{
+    color: #fff;
+    text-decoration: none !important;
+  }
+}
+
+.tab-content{
+  min-height: 400px;
+}
+
+.table{
+  margin-top: 30px;
+  width: 100%;
+  font-family: "Roboto Light",sans-serif;
+  font-weight: 300;
+  text-align: center;
+
+    & th{
+      font-size: 16px;
+      font-weight: 100;
+      padding: 20px;
+      border: 1px solid #d6d6d6;
+      background-color: rgba(205,205,205,.3);
+    }
+
+    & td{
+      font: 15px/30px "Roboto Light",sans-serif;
+      padding: 8px;
+      border: 1px solid #d6d6d6;
+    }
+}
+
+
+/*======================
+ CONTACT
+========================*/
+
+.contact{
+  padding: 70px 0;
+  color: #fff;
+  background: url('../img/features__bg.jpg') no-repeat center/cover;
+
+  &__address{font-style: normal;}
+
+  &__container{
+    justify-content: space-around;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+
+  &__input{
+    padding: 15px 15px;
+    color: #858585;
+    border: none;
+    outline: none;
+    margin: 5px 0;
+    flex: 0 0 50%;
+    border: 1px solid #ccc;
+
+     &:first-child{
+      border-right: none;
+     }
+  }
+
+  &__form{
+    flex: 0 0 45%;
+    color: #888;
+  }
+
+  .form__inner{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+  &__textarea{
+     padding: 15px;
+     border: 1px solid #ccc;
+     resize: vertical;
+     min-height: 200px;
+     outline: none;
+     display: block;
+     margin: 10px auto 15px;
+     width: 100%;
+  }
+
+  &__button{
+      display: block;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      background-color: #578adf;
+      color: #fff;
+      border: none;
+      font-size: 18px;
+      outline: none;
+      transition:.3s all;
+      border-radius: 4px;
+
+    &:hover{
+      background-color: darken(#578adf,5%);
+    }
+  }
+
+
+  &__info{
+    font-size: 26px;
+    margin: 20px 0;
+    color: #fff;
+    vertical-align: middle;
+    word-wrap: break-word;
+  }
+
+  &__icon{
+    vertical-align: middle;
+    margin: 0 10px;
+    font-size: 30px;
+    color: #fff;
+  }
+}
+
+
+/*====================
+   FOOTER
+========================*/
+
+.footer{
+  padding: 20px 0;
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__nav{
+   .nav__item{
+    padding: 10px;
+   }
+  }
+}
