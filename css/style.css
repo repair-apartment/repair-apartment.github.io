@@ -286,6 +286,7 @@ input[type="submit"] {
   margin-top: 0;
   font-size: 45px;
   color: #194573;
+  word-wrap: break-word;
 }
 .write-us__title__theme_bg {
   color: #fff;
@@ -530,6 +531,10 @@ input[type="submit"] {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.tab-container {
   overflow: hidden;
 }
 
