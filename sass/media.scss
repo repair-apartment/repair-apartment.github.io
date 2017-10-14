@@ -44,6 +44,12 @@
     z-index: 5;
     text-align: center !important;
   }
+  .nav__list{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   .nav__link,.nav__item{
     display: block;
     padding: 10px;
