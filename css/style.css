@@ -308,6 +308,7 @@ input[type="submit"] {
   font-size: 45px;
   color: #194573;
   word-wrap: break-word;
+  margin: 30px 0;
 }
 .write-us__title__theme_bg {
   color: #fff;
@@ -568,11 +569,9 @@ input[type="submit"] {
 
 .tab {
   background-color: #eee;
-  margin-bottom: 40px;
   text-align: center;
   display: inline-block;
-  padding: 10px;
-  background-color: #fff;
+  background-color: #eee;
   border-bottom: 2px solid #194573;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 25%;
@@ -584,6 +583,9 @@ input[type="submit"] {
 .tab a {
   color: #194573;
   text-decoration: none !important;
+  line-height: 60px;
+  width: 100%;
+  display: block;
 }
 
 .tab.active {
@@ -610,13 +612,18 @@ input[type="submit"] {
   font-size: 16px;
   font-weight: 100;
   padding: 20px;
-  border: 1px solid #d6d6d6;
+  border-bottom: 1px solid #eee;
   background-color: rgba(205, 205, 205, .3);
 }
 .table td {
   font: 15px/30px "Roboto Light",sans-serif;
   padding: 8px;
-  border: 1px solid #d6d6d6;
+  border-bottom: 1px solid #eee;
+}
+.table td:first-child,
+.table th:first-child {
+  text-align: left;
+  padding-left: 20px;
 }
 
 /*======================
