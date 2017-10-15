@@ -57,13 +57,16 @@ input[type="submit"] {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  background: url("../img/icon-preloader.png") center no-repeat;
+  -webkit-background-size: 50px 50px;
+  background-size: 50px;
 }
 .preloader__loader {
-  width: 130px;
-  height: 130px;
+  width: 100px;
+  height: 100px;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  border: 10px solid transparent;
+  border: 6px solid transparent;
   border-right-color: #fff;
   border-left-color: #fff;
   -webkit-animation: spin 2s infinite linear;
@@ -469,7 +472,6 @@ input[type="submit"] {
   margin: 0;
 }
 .work__item {
-  overflow: hidden;
   padding: 0;
   display: inline-block;
   vertical-align: top;

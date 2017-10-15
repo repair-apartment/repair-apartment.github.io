@@ -65,8 +65,8 @@ function img_load(){
   progress += +percent;
   loadedImg++;
   if (progress >= 100 || loadedImg == images.length){
-    preloader.delay(300).fadeOut('1000');
-    overlay.delay(300).fadeOut('1000');
+   preloader.delay(300).fadeOut('1000');
+   overlay.delay(300).fadeOut('1000');
   }
   $('#preloader__percent').text(progress);
   $('.preloader__line').css('width',progress + '%');
